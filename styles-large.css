@@ -1,0 +1,131 @@
+/* =========================================================
+   부모님 지인용 큰 글씨 오버라이드
+   - 본문 글씨 15-16% 확대
+   - 라인 스페이싱 여유
+   - 대비 강화
+   - 손글씨/타이프라이터 크기도 조정 (다만 손글씨는 유지)
+   ========================================================= */
+
+:root {
+  --ink: #1e1a17;         /* 대비 더 진하게 */
+  --ink-soft: #423b34;
+  --ink-muted: #6d655d;
+}
+
+body {
+  font-size: 17px;        /* 기본 크게 */
+  line-height: 1.9;
+}
+
+/* 봉투 인트로 - 글씨 확대 */
+.envelope-title { font-size: 17px; letter-spacing: 0.22em; }
+.envelope-names { font-size: 32px; }
+.envelope-date { font-size: 12px; }
+.intro-hint { font-size: 13px; letter-spacing: 0.25em; }
+
+/* 커버 */
+.cover-eyebrow { font-size: 12px; letter-spacing: 0.35em; margin-bottom: 28px; }
+.cover-names { font-size: 26px; letter-spacing: 0.15em; margin-top: 40px; }
+.cover-names .and { font-size: 18px; }
+.cover-meta { font-size: 16px; line-height: 2.1; margin-top: 32px; }
+
+/* 섹션 제목 */
+.section-title .en { font-size: 36px; }
+.section-title .kr { font-size: 12px; letter-spacing: 0.35em; margin-top: 14px; }
+
+/* 초대 문구 */
+.invitation-title { font-size: 36px; }
+.invitation-poem { font-size: 17px; line-height: 2.4; }
+.invitation-poem p + p { margin-top: 14px; }
+.parents-col .parents { font-size: 15px; line-height: 1.7; }
+.parents-col .relation { font-size: 14px; margin-top: 6px; }
+.parents-col .child { font-size: 19px; letter-spacing: 0.15em; margin-top: 10px; }
+.parents-col .child .role { font-size: 14px; }
+.parents-block { gap: 20px; }
+.parents-block .divider-v { height: 115px !important; }
+.invitation-when { font-size: 16px; line-height: 2.1; margin-top: 32px; padding-top: 24px; }
+
+/* 프레임 여백 넓히기 */
+.invitation-frame { padding: 48px 26px 40px; }
+
+/* 달력 */
+.calendar { max-width: 340px; padding: 28px 22px; }
+.cal-header .month { font-size: 36px; }
+.cal-header .year { font-size: 14px; }
+.cal-grid { gap: 4px; font-size: 14px; }
+.cal-grid .dow { font-size: 12px; padding: 8px 0; }
+.cal-grid .day { padding: 10px 0; font-size: 14px; }
+.dday { font-size: 13px; letter-spacing: 0.15em; margin-top: 24px; }
+.dday strong { font-size: 16px; }
+
+/* 오시는 길 */
+.venue-name { font-size: 22px; margin-bottom: 6px; letter-spacing: 0.05em; }
+.venue-hall { font-size: 13px; letter-spacing: 0.14em; margin-bottom: 20px; }
+.venue-address { font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
+.map-btn { font-size: 12px; letter-spacing: 0.1em; padding: 12px 8px; }
+.transit-list li { font-size: 15px; line-height: 1.9; padding: 18px 0; }
+.transit-list .label { font-size: 12px; letter-spacing: 0.18em; margin-bottom: 6px; }
+
+/* RSVP */
+.rsvp-form label { font-size: 13px; letter-spacing: 0.13em; }
+.rsvp-form input, .rsvp-form textarea, .rsvp-form select { font-size: 16px; padding: 14px; }
+.rsvp-radio label { font-size: 15px; padding: 14px; }
+.rsvp-submit { font-size: 14px; padding: 16px; letter-spacing: 0.25em; }
+.rsvp-note { font-size: 13px; }
+
+/* 방명록 */
+.guestbook-item .name { font-size: 14px; }
+.guestbook-item .msg { font-size: 15px; line-height: 1.9; }
+.guestbook-item .date { font-size: 10px; }
+.gb-empty { font-size: 14px; letter-spacing: 0.12em; }
+
+/* 계좌 */
+.acc-message { font-size: 15px; line-height: 2.1; margin-bottom: 28px; }
+.acc-toggle summary { font-size: 16px; padding: 18px 22px; letter-spacing: 0.08em; }
+.acc-toggle summary::after { font-size: 22px; }
+.acc-row { padding: 14px 0; }
+.acc-row .info strong { font-size: 14px; letter-spacing: 0.08em; }
+.acc-row .info .number { font-size: 13px; letter-spacing: 0.03em; }
+.acc-row .copy { font-size: 11px; letter-spacing: 0.13em; padding: 8px 12px; }
+
+/* 엔딩 */
+.ending-stamp { width: 140px; height: 175px; }
+.ending-title { font-size: 15px; letter-spacing: 0.22em; line-height: 2.2; }
+.ending-title .names { font-size: 17px; }
+.share-btn { font-size: 11px; letter-spacing: 0.18em; padding: 12px 18px; }
+
+/* 섹션 간격 좀 더 여유 */
+section { padding: 68px 32px; }
+.cover { padding: 72px 26px 60px; }
+
+/* 하트 프레임 큰 글씨 버전에서 살짝 더 크게 */
+.heart-frame {
+  width: min(100vw, 460px);
+  margin-left: calc(50% - min(50vw, 230px));
+}
+
+/* 부모님 지인용 배지 (subtly) */
+.large-badge {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: rgba(250,247,242,0.9);
+  border: 1px solid var(--hairline);
+  padding: 6px 12px;
+  font-family: var(--typewriter);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+  z-index: 50;
+  backdrop-filter: blur(4px);
+  border-radius: 2px;
+}
+
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  section { padding: 56px 22px; }
+  .invitation-poem { font-size: 16px; }
+  .venue-address { font-size: 15px; }
+  .transit-list li { font-size: 14px; }
+  .cover-names { font-size: 23px; }
+}
