@@ -683,7 +683,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* 하단 손글씨 이름 (배경 하트 프레임 아래쪽 여백에 위치) */
 .cover-hand-names {
   margin-top: 10%;
-  font-family: 'Sacramento', 'Nanum Pen Script', cursive;
+  font-family: 'Sacramento';
   font-size: 34px;
   color: #2a2622;
   letter-spacing: 0.04em;
