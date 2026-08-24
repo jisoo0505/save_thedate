@@ -1,0 +1,18 @@
+# 갤러리 사진 순서 목록
+# 한 줄에 파일 하나씩. 위에서부터 순서대로 표시됩니다.
+# 파일 뺄 때: 그 줄 지우기 (또는 앞에 # 붙이기)
+# 파일 추가할 때: assets/gallery/에 사진 넣고 여기에 파일명 추가
+#
+# 이 파일을 지우면 assets/gallery/ 폴더의 a.jpg, b.jpg... 순서로 자동 감지됩니다.
+
+a.jpg
+b.jpg
+c.jpg
+d.jpg
+e.jpg
+f.jpg
+g.jpg
+h.jpg
+i.jpg
+j.jpg
+k.jpg
