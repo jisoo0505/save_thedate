@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>이재민 ♥ 강지수 결혼합니다</title>
+<meta name="description" content="2026.10.11 SUN 11:00 AM · 하우스 오브 더 라움 · 이재민과 강지수의 결혼식에 초대합니다.">
+
+<!-- 카카오톡·페이스북·트위터 공유 미리보기 -->
+<meta property="og:title" content="이재민 ♥ 강지수 결혼합니다">
+<meta property="og:description" content="2026.10.11 SUN 11:00 AM · 하우스 오브 더 라움">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jisoo0505.github.io/save_thedate/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://jisoo0505.github.io/save_thedate/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Jaemin & Jisoo Wedding">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="이재민 ♥ 강지수 결혼합니다">
+<meta name="twitter:description" content="2026.10.11 SUN 11:00 AM · 하우스 오브 더 라움">
+<meta name="twitter:image" content="https://jisoo0505.github.io/save_thedate/assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Courier+Prime:wght@400;700&family=Gowun+Batang:wght@400;700&family=Great+Vibes&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@400;500;700&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- 큰 글씨 모드: 초기엔 비활성, JS가 토글 시 disabled 해제 -->
+<link rel="stylesheet" href="styles-large.css" id="largeModeCss" disabled>
+<script type="module" src="firebase-config.js"></script>
+
+<template id="__bundler_thumbnail" data-bg-color="#faf7f2">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#faf7f2"/>
+    <text x="600" y="410" text-anchor="middle" font-family="serif" font-size="24" font-style="italic" fill="#c4a882" opacity="0.5">loading...</text>
+  </svg>
+</template>
+</head>
+<body>
+
+
+
+<!-- ==================== 청첩장 본문 ==================== -->
+<div class="invite" id="invite">
+
+  <!-- BGM 오디오 (assets/bgm.mp3 파일이 있으면 자동 재생) -->
+  <audio id="bgmAudio" loop preload="none">
+    <source src="assets/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- BGM 토글 -->
+  <button class="bgm-toggle" id="bgmToggle" title="음악 재생/정지" aria-label="BGM 토글">
+    <svg id="bgmIconOn" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <path d="M9 18V5l12-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+    </svg>
+    <svg id="bgmIconOff" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18V5l12-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+      <line x1="2" y1="2" x2="22" y2="22" stroke="currentColor" stroke-width="1.8"></line>
+    </svg>
+  </button>
+
+  <!-- ==================== 커버 (참고 이미지 배경) ==================== -->
+  <section class="cover cover-embossed" style="background-image: url('assets/frames/cover-frame-new.jpg');">
+    <!-- 상단 손글씨 인사말 -->
+    <div class="cover-hand-title reveal">We're getting married</div>
+
+    <!-- 배경 이미지 하트 프레임 자리 (spacer) -->
+    <div class="cover-heart-spacer"></div>
+
+    <!-- 하트 아래 손글씨 이름 -->
+    <div class="cover-hand-names reveal">
+      Jaemin <span class="amp">&amp;</span> Jisoo
+    </div>
+
+    <!-- 이름 아래 날짜/장소 (하단 공유버튼과 동일한 typewriter 폰트) -->
+    <div class="cover-hand-info reveal">
+      <div>2026년 10월 11일 일요일 오전 11시</div>
+      <div>하우스 오브 더 라움 · 벨루스 홀</div>
+    </div>
+  </section>
+
+  <!-- ==================== 인비테이션 ==================== -->
+  <section class="invitation">
+    <!-- 큰 글씨 모드 토글 (눈에 잘 띄게 섹션 상단에 배치) -->
+    <button class="large-mode-banner" id="largeModeToggle" aria-label="큰 글씨 모드 전환">
+      <span class="lmb-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 7V4h16v3"></path>
+          <path d="M9 20h6"></path>
+          <path d="M12 4v16"></path>
+        </svg>
+      </span>
+      <span class="lmb-text">
+        <span class="lmb-title">글자 크게 보기</span>
+        <span class="lmb-sub">부모님·어르신께 편한 큰 글씨로 전환됩니다</span>
+      </span>
+      <span class="lm-switch"><span class="lm-thumb"></span></span>
+    </button>
+
+    <div class="section-title">
+      <span class="en">Our</span>
+      <span class="en en-two-line">wedding day</span>
+      <span class="kr">INVITATION</span>
+    </div>
+
+    <div class="invitation-frame reveal">
+      <div class="invitation-poem">
+        <p>함께하는 열 번째 가을,</p>
+        <p>이제는 연인이 아닌</p>
+        <p>부부로 살아가려 합니다.</p>
+        <p>&nbsp;</p>
+        <p>저희의 새로운 시작을</p>
+        <p>함께 축복해 주시면 감사하겠습니다.</p>
+      </div>
+
+      <div class="parents-block">
+        <div class="parents-col">
+          <div class="parents">이상희 <span class="dot">·</span> 장경미 <span class="of">의</span></div>
+          <div class="relation">아들</div>
+          <div class="child"><span class="role">신랑</span>이재민</div>
+        </div>
+        <div class="divider-v"></div>
+        <div class="parents-col">
+          <div class="parents">강경우 <span class="dot">·</span> 최치선 <span class="of">의</span></div>
+          <div class="relation">딸</div>
+          <div class="child"><span class="role">신부</span>강지수</div>
+        </div>
+      </div>
+
+      <div class="invitation-notice">
+        예식장 사정으로 <strong>화환은 정중히 사양</strong>합니다.<br>
+        축하해 주시는 그 마음만으로 충분히 감사합니다.
+      </div>
+
+      <div class="heart-icon-mini">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21s-7-4.5-9.5-9C1 9 3 5.5 6.5 5.5c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3C21 5.5 23 9 21.5 12 19 16.5 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Save the Date (달력) ==================== -->
+  <section class="savedate">
+    <div class="section-title">
+      <span class="en">Save the</span>
+      <span class="en en-two-line">Date</span>
+      <span class="kr">2026 . 10 . 11</span>
+    </div>
+
+    <div class="calendar reveal">
+      <div class="cal-header">
+        <span class="month">October</span>
+        <span class="year">2026</span>
+      </div>
+      <div class="cal-grid" id="calGrid">
+        <div class="dow sun">S</div>
+        <div class="dow">M</div>
+        <div class="dow">T</div>
+        <div class="dow">W</div>
+        <div class="dow">T</div>
+        <div class="dow">F</div>
+        <div class="dow">S</div>
+        <!-- 채워짐: JS -->
+      </div>
+    </div>
+
+    <div class="dday reveal" id="dday">D-DAY <strong>계산중...</strong></div>
+  </section>
+
+  <!-- ==================== 갤러리 ==================== -->
+  <section class="gallery">
+    <div class="section-title">
+      <span class="en">Our</span>
+      <span class="en en-two-line">moments</span>
+      <span class="kr">GALLERY</span>
+    </div>
+
+    <!-- 갤러리 컨테이너: JS가 assets/gallery/ 폴더 사진을 abc 순으로 자동 로드 -->
+    <div class="gallery-auto reveal" id="galleryAuto"></div>
+
+  </section>
+
+  <!-- ==================== 오시는 길 ==================== -->
+  <section class="location">
+    <div class="section-title">
+      <span class="en">Come to</span>
+      <span class="en en-two-line">our wedding</span>
+      <span class="kr">LOCATION</span>
+    </div>
+
+    <div class="reveal">
+      <div class="venue-name">하우스 오브 더 라움</div>
+      <div class="venue-hall">HOUSE OF THE RAUM · BELLUS HALL</div>
+      <div class="venue-address">
+        서울 광진구 능동로 81<br>
+        더 라움 펜트하우스 지하1층 벨루스 홀
+      </div>
+
+      <div class="map-placeholder">
+        <img src="assets/photos/map-illustration.jpg" alt="하우스 오브 더 라움 지도" style="width:100%; height:100%; object-fit:contain; background:#fdfaf1;">
+      </div>
+
+      <div class="map-buttons">
+        <a class="map-btn" href="https://map.kakao.com/link/search/더라움 펜트하우스" target="_blank" rel="noopener">KAKAO MAP</a>
+        <a class="map-btn" href="https://map.naver.com/v5/search/하우스오브더라움" target="_blank" rel="noopener">NAVER MAP</a>
+        <a class="map-btn" href="https://map.google.com/?q=서울 광진구 능동로 81" target="_blank" rel="noopener">GOOGLE</a>
+      </div>
+
+      <ul class="transit-list">
+        <li>
+          <span class="label">SUBWAY · 지하철</span>
+          2호선 · 7호선 <strong>건대입구역 5번 출구</strong>에서<br>
+          도보 약 5분
+        </li>
+        <li>
+          <span class="label">BUS · 버스</span>
+          <strong>건대로데오거리입구</strong> 정류장 · 도보 1분<br>
+          <strong>광진문화예술회관</strong> 정류장 · 도보 6분
+        </li>
+        <li>
+          <span class="label">CAR · 자가용</span>
+          네비게이션에 "더 라움 펜트하우스" 검색<br>
+          하객 주차 2시간 무료
+          <button class="addr-copy-btn" data-address="서울 광진구 능동로 81">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:5px;">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            도로명주소 복사
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== RSVP ==================== -->
+  <section class="rsvp">
+    <div class="section-title">
+      <span class="en">Kindly</span>
+      <span class="en en-two-line">reply</span>
+      <span class="kr">RSVP · 참석 여부 회신</span>
+    </div>
+
+    <div class="rsvp-guide reveal">
+      정확한 식사 준비를 위해<br>
+      참석 여부를 남겨주시면 큰 도움이 됩니다 ♡
+    </div>
+
+    <form class="rsvp-form reveal" id="rsvpForm">
+      <div>
+        <label>NAME · 성함</label>
+        <input type="text" name="name" placeholder="홍길동" required>
+      </div>
+
+      <div>
+        <label>SIDE · 신랑측 / 신부측</label>
+        <div class="rsvp-radio" data-radio="side">
+          <label data-value="groom">신랑측</label>
+          <label data-value="bride">신부측</label>
+        </div>
+      </div>
+
+      <div>
+        <label>ATTEND · 참석 여부</label>
+        <div class="rsvp-radio" data-radio="attend">
+          <label data-value="yes">참석합니다</label>
+          <label data-value="no">참석이 어렵습니다</label>
+        </div>
+      </div>
+
+      <div>
+        <label>GUEST · 동행 인원 (본인 포함)</label>
+        <select name="count">
+          <option value="1">1명</option>
+          <option value="2">2명</option>
+          <option value="3">3명</option>
+          <option value="4">4명 이상</option>
+        </select>
+      </div>
+
+      <div>
+        <label>MESSAGE · 전하실 말씀 (선택)</label>
+        <textarea name="message" placeholder="축하 인사나 특이사항을 남겨주세요"></textarea>
+      </div>
+
+      <button class="rsvp-submit" type="submit">SEND · 회신 보내기</button>
+      <div class="rsvp-note">회신은 신랑·신부에게 전달됩니다.</div>
+    </form>
+  </section>
+
+  <!-- ==================== 방명록 ==================== -->
+  <section class="guestbook">
+    <div class="section-title">
+      <span class="en">Leave a</span>
+      <span class="en en-two-line">message</span>
+      <span class="kr">GUEST BOOK</span>
+    </div>
+
+    <div class="guestbook-list" id="gbList">
+      <div class="gb-empty">첫 번째 축하 메시지를 남겨주세요 ♡</div>
+    </div>
+
+    <form class="rsvp-form reveal" id="gbForm">
+      <div>
+        <label>FROM · 이름</label>
+        <input type="text" name="gbname" placeholder="이름" required>
+      </div>
+      <div>
+        <label>MESSAGE · 메시지</label>
+        <textarea name="gbmsg" placeholder="축하 메시지를 남겨주세요" required></textarea>
+      </div>
+      <button class="rsvp-submit" type="submit">POST · 등록하기</button>
+    </form>
+  </section>
+
+  <!-- ==================== 계좌번호 ==================== -->
+  <section class="accounts">
+    <div class="section-title">
+      <span class="en">With</span>
+      <span class="en en-two-line">love</span>
+      <span class="kr">마음 전하실 곳</span>
+    </div>
+
+    <div class="acc-message reveal">
+      참석이 어려우신 분들을 위해<br>
+      마음을 전하실 수 있는 계좌를 안내드립니다.
+    </div>
+
+    <details class="acc-toggle reveal">
+      <summary>신랑측 계좌번호</summary>
+      <div class="body">
+        <div class="acc-row">
+          <div class="info">
+            <strong>이재민 · 신랑</strong>
+            <div class="number">카카오뱅크 3333-19-3030547</div>
+          </div>
+          <button class="copy" data-copy="3333193030547">COPY</button>
+        </div>
+        <div class="acc-row">
+          <div class="info">
+            <strong>이상희 · 아버지</strong>
+            <div class="number">하나은행 756-910439-18407</div>
+          </div>
+          <button class="copy" data-copy="75691043918407">COPY</button>
+        </div>
+        <div class="acc-row">
+          <div class="info">
+            <strong>장경미 · 어머니</strong>
+            <div class="number">농협은행 077-12-284130</div>
+          </div>
+          <button class="copy" data-copy="07712284130">COPY</button>
+        </div>
+      </div>
+    </details>
+
+    <details class="acc-toggle reveal">
+      <summary>신부측 계좌번호</summary>
+      <div class="body">
+        <div class="acc-row">
+          <div class="info">
+            <strong>강지수 · 신부</strong>
+            <div class="number">우리은행 1002-733-608848</div>
+          </div>
+          <button class="copy" data-copy="1002733608848">COPY</button>
+        </div>
+        <div class="acc-row">
+          <div class="info">
+            <strong>강경우 · 아버지</strong>
+            <div class="number">농협 170273-56-034780</div>
+          </div>
+          <button class="copy" data-copy="17027356034780">COPY</button>
+        </div>
+        <div class="acc-row">
+          <div class="info">
+            <strong>최치선 · 어머니</strong>
+            <div class="number">우리은행 1002-962-824576</div>
+          </div>
+          <button class="copy" data-copy="1002962824576">COPY</button>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ==================== 엔딩 ==================== -->
+  <section class="ending">
+    <div class="ending-stamp-photo">
+      <img src="assets/frames/stamp-final-cropped.png" alt="wedding stamp">
+    </div>
+    <div class="ending-title">
+      THE WEDDING OF<br>
+      <span class="names">JAEMIN &amp; JISOO</span><br>
+      OCT 11, 2026<br>
+      AM 11:00
+    </div>
+
+    <div class="ending-share">
+      <button class="share-btn" id="shareLink">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:8px;">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        청첩장 공유하기
+      </button>
+    </div>
+
+    <div class="footer-mark">Thank you ♡</div>
+  </section>
+</div>
+
+<!-- 라이트박스 -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbClose">×</button>
+  <img src="" alt="" id="lbImg">
+</div>
+
+<!-- 토스트 -->
+<div class="toast" id="toast">복사되었습니다</div>
+
+<script>
+// ==================== 봉투 오프닝 ====================
+// 오프닝 인트로 제거 - 바로 메인 화면 표시
+document.body.style.overflow = 'auto';
+// initReveals()는 revealObserver 정의 후 아래에서 호출
+
+// ==================== 큰 글씨 모드 토글 ====================
+(function initLargeMode() {
+  const btn = document.getElementById('largeModeToggle');
+  const css = document.getElementById('largeModeCss');
+  if (!btn || !css) return;
+
+  // localStorage에 저장된 선택 값 로드 (다시 열어도 유지)
+  const saved = localStorage.getItem('largeMode') === '1';
+  if (saved) {
+    btn.classList.add('active');
+    css.disabled = false;
+  } else {
+    css.disabled = true;
+  }
+
+  btn.addEventListener('click', () => {
+    const on = !btn.classList.contains('active');
+    btn.classList.toggle('active', on);
+    css.disabled = !on;
+    localStorage.setItem('largeMode', on ? '1' : '0');
+  });
+})();
+
+// ==================== D-DAY ====================
+function computeDday() {
+  const wedding = new Date('2026-10-11T11:00:00+09:00');
+  const now = new Date();
+  const diff = Math.ceil((wedding - now) / (1000 * 60 * 60 * 24));
+  const el = document.getElementById('dday');
+  if (diff > 0) el.innerHTML = `우리의 결혼식까지 <strong>D-${diff}</strong>`;
+  else if (diff === 0) el.innerHTML = `오늘 <strong>결혼합니다 ♡</strong>`;
+  else el.innerHTML = `<strong>결혼했습니다 ♡</strong>`;
+}
+computeDday();
+
+// ==================== 달력 렌더 (2026년 10월) ====================
+function renderCalendar() {
+  const grid = document.getElementById('calGrid');
+  // 2026-10-01은 목요일 (getDay() 반환 4)
+  const firstDay = new Date(2026, 9, 1).getDay(); // 0=일
+  const daysInMonth = 31;
+  const targetDate = 11;
+  const targetDow = new Date(2026, 9, targetDate).getDay(); // 일요일 = 0
+
+  // 앞 빈칸
+  for (let i = 0; i < firstDay; i++) {
+    const el = document.createElement('div');
+    el.className = 'day empty';
+    el.textContent = '.';
+    grid.appendChild(el);
+  }
+  for (let d = 1; d <= daysInMonth; d++) {
+    const el = document.createElement('div');
+    const dow = new Date(2026, 9, d).getDay();
+    el.className = 'day' + (dow === 0 ? ' sun' : '') + (d === targetDate ? ' highlight' : '');
+    el.textContent = d;
+    grid.appendChild(el);
+  }
+}
+renderCalendar();
+
+// ==================== Reveal 애니메이션 ====================
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+function initReveals() {
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+}
+// 오프닝 제거되었으니 즉시 reveal 시작
+initReveals();
+
+// ==================== 자동 갤러리 (assets/gallery/ 폴더 스캔) ====================
+// 사용법:
+//   방법1) assets/gallery/manifest.txt 파일에 한 줄에 하나씩 파일명 나열 → 그 순서대로 표시
+//          예:  a.jpg
+//               b.jpg
+//               c.jpg
+//   방법2) manifest.txt 없이 assets/gallery/ 폴더에 a.jpg, b.jpg... 넣으면 자동 스캔
+//          (a~z + aa~az + ba~bz 까지 자동 감지)
+(async function loadGallery() {
+  const container = document.getElementById('galleryAuto');
+  if (!container) return;
+
+  let files = [];
+
+  // 방법 1: manifest.txt 시도
+  try {
+    const res = await fetch('assets/gallery/manifest.txt', { cache: 'no-cache' });
+    if (res.ok) {
+      const text = await res.text();
+      files = text.split(/\r?\n/)
+        .map(s => s.trim())
+        .filter(s => s && !s.startsWith('#'));
+    }
+  } catch (e) { /* manifest 없음 → 자동 스캔 */ }
+
+  // 방법 2: manifest 없으면 a.jpg~z.jpg, aa.jpg~bz.jpg 자동 감지
+  if (files.length === 0) {
+    const candidates = [];
+    // a~z
+    for (let i = 0; i < 26; i++) {
+      candidates.push(String.fromCharCode(97 + i) + '.jpg');
+    }
+    // aa~bz
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < 26; j++) {
+        candidates.push(String.fromCharCode(97 + i) + String.fromCharCode(97 + j) + '.jpg');
+      }
+    }
+    // .jpg / .jpeg / .png / .webp 모두 시도
+    const exts = ['jpg', 'jpeg', 'png', 'webp'];
+    const checks = candidates.flatMap(name => {
+      const base = name.replace('.jpg', '');
+      return exts.map(ext => `${base}.${ext}`);
+    });
+
+    const results = await Promise.all(
+      checks.map(name =>
+        fetch('assets/gallery/' + name, { method: 'HEAD' })
+          .then(r => r.ok ? name : null)
+          .catch(() => null)
+      )
+    );
+    // 중복 제거 (같은 base가 여러 확장자면 첫 발견만)
+    const seen = new Set();
+    for (const name of results) {
+      if (!name) continue;
+      const base = name.split('.')[0];
+      if (!seen.has(base)) {
+        seen.add(base);
+        files.push(name);
+      }
+    }
+  }
+
+  if (files.length === 0) {
+    container.innerHTML = '<div style="text-align:center; padding:40px 20px; color:var(--ink-muted); font-family:var(--typewriter); font-size:11px; letter-spacing:0.2em;">assets/gallery/ 폴더에 사진을<br>a.jpg, b.jpg ... 순서로 넣어주세요</div>';
+    return;
+  }
+
+  // 렌더링
+  container.innerHTML = files.map((name, idx) => {
+    const src = 'assets/gallery/' + name;
+    return `<img class="gallery-auto-img" src="${src}" alt="갤러리 사진 ${idx+1}" data-lb loading="lazy">`;
+  }).join('');
+
+  // 라이트박스 이벤트 재등록 (아래 라이트박스 초기화 로직에서 처리)
+  if (typeof attachLightbox === 'function') attachLightbox();
+})();
+
+// ==================== 라이트박스 ====================
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+// document-level delegation: 나중에 동적으로 추가된 이미지에도 자동 반응
+document.addEventListener('click', (e) => {
+  const img = e.target.closest('[data-lb]');
+  if (!img) return;
+  lbImg.src = img.src;
+  lb.classList.add('active');
+});
+function attachLightbox() { /* 유지: 갤러리 자동 로드 후 호출 (delegation이라 실제 작업 필요 없음) */ }
+document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('active'));
+lb.addEventListener('click', (e) => {
+  if (e.target === lb) lb.classList.remove('active');
+});
+
+// ==================== 라디오 그룹 (참석 여부) ====================
+document.querySelectorAll('[data-radio]').forEach(group => {
+  const labels = group.querySelectorAll('label');
+  labels.forEach(l => {
+    l.addEventListener('click', () => {
+      labels.forEach(x => x.classList.remove('selected'));
+      l.classList.add('selected');
+      group.dataset.value = l.dataset.value;
+    });
+  });
+});
+
+// ==================== 토스트 ====================
+const toast = document.getElementById('toast');
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 1800);
+}
+
+// ==================== RSVP 제출 (Firebase) ====================
+document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (!window.WeddingDB) {
+    showToast('네트워크 연결 확인 후 다시 시도해주세요');
+    return;
+  }
+  const fd = new FormData(e.target);
+  const name = (fd.get('name') || '').trim();
+  const side = document.querySelector('[data-radio="side"]').dataset.value || '';
+  const attend = document.querySelector('[data-radio="attend"]').dataset.value || '';
+
+  if (!name) { showToast('성함을 입력해주세요'); return; }
+  if (!side)  { showToast('신랑측/신부측을 선택해주세요'); return; }
+  if (!attend){ showToast('참석 여부를 선택해주세요'); return; }
+
+  const submitBtn = e.target.querySelector('.rsvp-submit');
+  submitBtn.disabled = true;
+  const oldTxt = submitBtn.textContent;
+  submitBtn.textContent = '보내는 중...';
+
+  try {
+    await window.WeddingDB.submitRsvp({
+      name,
+      side,
+      attend,
+      count: fd.get('count') || '1',
+      message: (fd.get('message') || '').trim()
+    });
+    e.target.reset();
+    document.querySelectorAll('.rsvp-radio label').forEach(l => l.classList.remove('selected'));
+    delete document.querySelector('[data-radio="side"]').dataset.value;
+    delete document.querySelector('[data-radio="attend"]').dataset.value;
+    showToast('회신이 전달되었습니다 ♡');
+  } catch (err) {
+    console.error(err);
+    showToast('전송 실패. 잠시 후 다시 시도해주세요');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = oldTxt;
+  }
+});
+
+// ==================== 방명록 (Firebase 실시간) ====================
+function escapeHtml(s) {
+  return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function formatDate(d) {
+  if (!d) return '';
+  return `${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+}
+function renderGuestbookItems(items) {
+  const el = document.getElementById('gbList');
+  if (items.length === 0) {
+    el.innerHTML = '<div class="gb-empty">첫 번째 축하 메시지를 남겨주세요 ♡</div>';
+    return;
+  }
+  el.innerHTML = items.map(item => `
+    <div class="guestbook-item">
+      <div class="date">${formatDate(item.createdAt)}</div>
+      <div class="name">FROM. ${escapeHtml(item.name)}</div>
+      <div class="msg">${escapeHtml(item.msg)}</div>
+    </div>
+  `).join('');
+}
+// Firebase 준비되면 실시간 구독 시작
+function initGuestbook() {
+  if (!window.WeddingDB) {
+    document.getElementById('gbList').innerHTML =
+      '<div class="gb-empty">네트워크 연결 대기 중...</div>';
+    return;
+  }
+  window.WeddingDB.subscribeGuestbook(renderGuestbookItems);
+}
+if (window.WeddingDB) initGuestbook();
+else window.addEventListener('weddingdb-ready', initGuestbook);
+
+document.getElementById('gbForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (!window.WeddingDB) { showToast('네트워크 연결 확인'); return; }
+  const fd = new FormData(e.target);
+  const name = (fd.get('gbname') || '').trim();
+  const msg = (fd.get('gbmsg') || '').trim();
+  if (!name || !msg) return;
+
+  const submitBtn = e.target.querySelector('.rsvp-submit');
+  submitBtn.disabled = true;
+  const oldTxt = submitBtn.textContent;
+  submitBtn.textContent = '등록 중...';
+
+  try {
+    await window.WeddingDB.submitGuestbook({ name, msg });
+    e.target.reset();
+    showToast('메시지가 등록되었습니다 ♡');
+  } catch (err) {
+    console.error(err);
+    showToast('등록 실패. 잠시 후 다시 시도해주세요');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = oldTxt;
+  }
+});
+
+// ==================== 계좌 복사 (계좌 등록되면 활성화) ====================
+document.querySelectorAll('.copy').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const val = btn.dataset.copy;
+    if (!val) { showToast('추후 안내 예정입니다'); return; }
+    navigator.clipboard.writeText(val).then(() => showToast('계좌번호가 복사되었습니다'));
+  });
+});
+
+// ==================== 도로명주소 복사 ====================
+document.querySelectorAll('.addr-copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const addr = btn.dataset.address;
+    navigator.clipboard.writeText(addr).then(() => showToast('주소가 복사되었습니다'))
+      .catch(() => showToast('복사 실패. 직접 선택해 주세요'));
+  });
+});
+
+// ==================== 공유 ====================
+document.getElementById('shareLink').addEventListener('click', () => {
+  navigator.clipboard.writeText(location.href).then(() => showToast('링크가 복사되었습니다'));
+});
+
+
+// ==================== BGM 토글 ====================
+const bgmAudio = document.getElementById('bgmAudio');
+const bgmOn = document.getElementById('bgmIconOn');
+const bgmOff = document.getElementById('bgmIconOff');
+let bgmPlaying = false;
+
+function updateBgmIcon() {
+  bgmOn.style.display = bgmPlaying ? '' : 'none';
+  bgmOff.style.display = bgmPlaying ? 'none' : '';
+}
+
+document.getElementById('bgmToggle').addEventListener('click', () => {
+  if (bgmPlaying) {
+    bgmAudio.pause();
+    bgmPlaying = false;
+    updateBgmIcon();
+  } else {
+    bgmAudio.play().then(() => {
+      bgmPlaying = true;
+      updateBgmIcon();
+    }).catch(() => {
+      showToast('assets/bgm.mp3 파일을 추가하면 재생됩니다');
+    });
+  }
+});
+
+// 봉투 오픈 시 자동재생 시도 (사용자 제스처 안에서)
+intro.addEventListener('click', () => {
+  bgmAudio.play().then(() => {
+    bgmPlaying = true;
+    updateBgmIcon();
+  }).catch(() => { /* 파일 없거나 사용자가 차단 */ });
+}, { once: true });
+</script>
+</body>
+</html>
