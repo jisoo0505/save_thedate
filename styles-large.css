@@ -28,46 +28,9 @@ body {
 .cover-names { font-size: 26px; letter-spacing: 0.15em; margin-top: 40px; }
 .cover-names .and { font-size: 18px; }
 /* ═════════════════════════════════════════════════════════
-   커버(첫 화면) 부분은 큰 글씨 모드여도 보통 버전과 완전 동일하게 잠금.
-   styles.css에 정의된 값을 그대로 상속받도록 여기서는 절대 건드리지 않음.
-   혹시 상위 body/section-title 규칙이 상속으로 흘러들어와도
-   커버 내부 요소는 initial 로 강제 리셋.
+   커버(첫 화면) = 기본 버전(styles.css) 그대로.
+   큰 글씨 모드는 여기부터 아래 섹션(초대글, 캘린더, 오시는길...) 만 확대.
    ═════════════════════════════════════════════════════════ */
-.cover.cover-embossed,
-.cover.cover-embossed * {
-  /* body { font-size: 17px } 영향 차단 — styles.css의 실제 값이 재적용됨 */
-  font-size: initial;
-}
-/* styles.css 원본 값 그대로 재선언 (상속 안 타게 명시적으로) */
-.cover.cover-embossed .cover-hand-title {
-  font-family: 'Sacramento', 'Nanum Pen Script', cursive;
-  font-size: 32px;
-  margin-top: 30%;
-  padding: 0 14%;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-}
-.cover.cover-embossed .cover-heart-spacer {
-  height: 34%;
-  margin-top: 4%;
-}
-.cover.cover-embossed .cover-hand-names {
-  font-family: 'Sacramento';
-  font-size: 34px;
-  margin-top: 2%;
-  letter-spacing: 0.04em;
-}
-.cover.cover-embossed .cover-hand-names .amp {
-  font-size: 28px;
-  margin: 0 14px;
-}
-.cover.cover-embossed .cover-hand-info {
-  font-family: var(--typewriter);
-  font-size: 12px;
-  margin-top: -3%;
-  letter-spacing: 0.12em;
-  line-height: 2;
-}
 
 /* 양가 이름 한 줄 배치 (큰 글씨 버전 전용) — grid 완전 무력화 */
 .parents-inline {
