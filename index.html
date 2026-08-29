@@ -38,68 +38,7 @@
 </head>
 <body>
 
-<!-- ==================== 오프닝 봉투 애니메이션 (SVG 디지털 그래픽) ==================== -->
-<div class="opening" id="opening" aria-hidden="false">
-  <div class="opening-scene" id="openingScene">
 
-    <!-- 봉투 몸체 (앞판, 카드보다 위에 있어서 카드가 밑에서 올라올 때 자연스럽게 가려줌) -->
-    <div class="env-body">
-      <svg viewBox="0 0 320 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- 종이 그림자 -->
-        <rect x="4" y="10" width="312" height="204" rx="3" fill="#c9bfae" opacity="0.35"/>
-        <!-- 봉투 앞판 (오프화이트) -->
-        <rect x="0" y="0" width="320" height="210" rx="3" fill="#faf7ee"/>
-        <!-- 하단 접힘 라인 (희미) -->
-        <path d="M 0 100 L 160 190 L 320 100" fill="none" stroke="#e5ddcb" stroke-width="1"/>
-        <!-- 좌측/우측 접힘 라인 -->
-        <path d="M 0 0 L 160 90 L 320 0" fill="none" stroke="#e5ddcb" stroke-width="1"/>
-        <!-- 봉투 왁스실 대신 얇은 하트 -->
-        <path d="M 160 118 c -3,-4 -10,-4 -10,3 c 0,5 10,10 10,10 c 0,0 10,-5 10,-10 c 0,-7 -7,-7 -10,-3 z" fill="none" stroke="#c9a882" stroke-width="1"/>
-      </svg>
-    </div>
-
-    <!-- 카드 (봉투 안에 숨어 있다가 위로 슬라이드하며 나옴) -->
-    <div class="env-card" id="envCard">
-      <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="300" height="200" rx="2" fill="#fdfbf5"/>
-        <!-- 내부 얇은 프레임 (청첩장 커버와 동일한 이중선) -->
-        <rect x="10" y="10" width="280" height="180" rx="1" fill="none" stroke="#d8cebc" stroke-width="0.6"/>
-        <rect x="14" y="14" width="272" height="172" rx="1" fill="none" stroke="#e5ddcb" stroke-width="0.5"/>
-        <!-- 손글씨 이름 -->
-        <text x="150" y="70" text-anchor="middle" font-family="'Sacramento', cursive" font-size="24" fill="#3a342d">Jaemin &amp; Jisoo</text>
-        <!-- 얇은 구분선 -->
-        <line x1="120" y1="88" x2="180" y2="88" stroke="#c9a882" stroke-width="0.6"/>
-        <!-- 날짜 -->
-        <text x="150" y="118" text-anchor="middle" font-family="'Courier Prime', 'Courier New', monospace" font-size="9" fill="#5a5148" letter-spacing="1.5">2026 . 10 . 11  SUN</text>
-        <text x="150" y="138" text-anchor="middle" font-family="'Courier Prime', 'Courier New', monospace" font-size="8" fill="#8a7f70" letter-spacing="1.2">HOUSE OF THE RAUM · SEOUL</text>
-        <!-- 하단 작은 하트 -->
-        <path d="M 150 165 c -2.5,-3.5 -8,-3.5 -8,2 c 0,4 8,8 8,8 c 0,0 8,-4 8,-8 c 0,-5.5 -5.5,-5.5 -8,-2 z" fill="#d4bfa0"/>
-      </svg>
-    </div>
-
-    <!-- 봉투 뚜껑 (위쪽 삼각형) — 힌지가 위쪽에 있어서 문 열듯 앞으로 젖혀짐 -->
-    <div class="env-flap" id="envFlap">
-      <svg viewBox="0 0 320 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- 뚜껑 앞면 (닫힌 상태에서 보이는 면) -->
-        <path d="M 0 0 L 320 0 L 160 118 Z" fill="#f5f0e3"/>
-        <!-- 뚜껑 접힘 라인 아주 살짝 어두운 그림자 -->
-        <path d="M 0 0 L 160 118 L 320 0" fill="none" stroke="#e0d5be" stroke-width="0.8"/>
-      </svg>
-    </div>
-
-    <!-- 뚜껑 뒷면 (열렸을 때 보이는 안쪽 면) -->
-    <div class="env-flap-back" id="envFlapBack">
-      <svg viewBox="0 0 320 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 0 130 L 320 130 L 160 12 Z" fill="#ede4d0"/>
-      </svg>
-    </div>
-
-    <!-- 오프닝 하단 소소한 텍스트 -->
-    <div class="opening-hint" id="openingHint">
-      <span>Save the Date</span>
-    </div>
-  </div>
-</div>
 
 <!-- ==================== 청첩장 본문 ==================== -->
 <div class="invite" id="invite">
